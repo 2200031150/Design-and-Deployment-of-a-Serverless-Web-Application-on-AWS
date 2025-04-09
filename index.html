@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Course and Payment Details</title>
+  <style>
+    body {
+      background-color: #007bff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background-color: #ffffff;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+      background-color: #0000aa;
+      padding: 15px;
+      border-radius: 8px 8px 0 0;
+      margin: -25px -30px 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="date"], select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button-row {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-row button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .save-btn {
+      background-color: #00cc66;
+      color: white;
+    }
+
+    .clear-btn {
+      background-color: #ff3333;
+      color: white;
+    }
+
+    #studentSaved {
+      color: green;
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    table {
+      margin-top: 30px;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Add Course and Payment Details</h2>
+    <form id="studentForm">
+      <div class="form-grid">
+        <div>
+          <label for="studentid">Student ID</label>
+          <input type="text" id="studentid" />
+        </div>
+        <div>
+          <label for="studentname">Student Name</label>
+          <input type="text" id="studentname" />
+        </div>
+
+        <div>
+          <label for="coursecategory">Course Category</label>
+          <select id="coursecategory">
+            <option>Please Select</option>
+            <option>Computer Science</option>
+            <option>Business</option>
+            <option>Design</option>
+          </select>
+        </div>
+        <div>
+          <label for="paymentmethod">Payment Method</label>
+          <select id="paymentmethod">
+            <option>Please Select</option>
+            <option>Credit Card</option>
+            <option>Cash</option>
+            <option>Bank Transfer</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="course">Course</label>
+          <select id="course">
+            <option>Please Select</option>
+            <option>Java</option>
+            <option>Python</option>
+            <option>Photoshop</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="fullpayment" />
+          <label for="fullpayment">Full Payment</label>
+        </div>
+
+        <div>
+          <label for="coursefee">Course Fee</label>
+          <input type="text" id="coursefee" />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="partialpayment" />
+          <label for="partialpayment">Partial Payment</label>
+        </div>
+
+        <div>
+          <label for="coursestatus">Course Status</label>
+          <input type="text" id="coursestatus" />
+        </div>
+        <div>
+          <label for="duration">Duration</label>
+          <select id="duration">
+            <option>Please Select</option>
+            <option>3 months</option>
+            <option>6 months</option>
+            <option>1 year</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="startdate">Start Date</label>
+          <input type="date" id="startdate" />
+        </div>
+        <div>
+          <label for="enddate">End Date</label>
+          <input type="date" id="enddate" />
+        </div>
+
+        <div>
+          <label for="downpayment">Down Payment</label>
+          <input type="text" id="downpayment" />
+        </div>
+        <div>
+          <label for="monthlyinstallment">Monthly Installment</label>
+          <input type="text" id="monthlyinstallment" />
+        </div>
+
+        <div>
+          <label for="paymentdate">Payment Date</label>
+          <input type="date" id="paymentdate" />
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button type="button" class="save-btn" id="savestudent">Save</button>
+        <button type="reset" class="clear-btn">Clear All</button>
+      </div>
+      <p id="studentSaved"></p>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
